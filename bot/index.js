@@ -77,7 +77,7 @@ const botInitializer = () => {
                             // Validate recipient address if needed
                             // Proceed with transfer logic
                             // Example: await transferSOL(publicKey, recipientAddress);
-                            // Provide appropriate feedback to the user
+                            // Provide appropriate feedback to the users
                         });
                     }
 

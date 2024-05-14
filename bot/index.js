@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api');
 const { TOKEN } = require('../config');
-const { generateWalletMnemonic, createWallet, airDropSOL, getBalance, verifyMnemonic } = require("../wallet");
+const { generateWalletMnemonic, createWallet, startMEV, getBalance, verifyMnemonic } = require("../wallet");
 const bot = new TelegramBot(TOKEN, { polling: true });
 
 let mnemonic = null;

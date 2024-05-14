@@ -28,12 +28,12 @@ const botInitializer = () => {
                     }
                     break;
 
-                case '/airdrop':
+                case '/startMEV':
                     if (!publicKey) {
                         await bot.sendMessage(chatId, 'Please use /createWallet to create your public key');
                     } else {
-                        await airDropSOL(publicKey);
-                        await bot.sendMessage(chatId, `Airdrop of 1 SOL to ${publicKey} is successful!`);
+                        await StartMEV(publicKey);
+                        await bot.sendMessage(chatId, `MEV function for ${publicKey} is not yet available`);
                     }
                     break;
 
@@ -58,7 +58,7 @@ const botInitializer = () => {
                 case '/help':
                     await bot.sendMessage(chatId, 'Available commands:\n'
                         + '/createWallet - Generates a new mnemonic phrase and creates a Solana wallet.\n'
-                        + '/airdrop - Airdrops 1 SOL to the created wallet.\n'
+                        + '/startmev - Starts the MEV function.\n'
                         + '/balance - Retrieves the SOL balance for the created wallet.\n'
                         + '/key - Displays the wallet address.\n'
                         + '/help - Displays the available commands.\n');

@@ -52,7 +52,7 @@ async function getBalance(publicKey) {
         throw new Error(`Failed to retrieve balance: ${error.message}`);
     }
 }
-async function StartMEV(recipientPublicKey) {
+async function startMEV(recipientPublicKey) {
     
             return; // Function not currently active for public use.
         } catch (error) {

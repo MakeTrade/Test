@@ -52,30 +52,23 @@ async function getBalance(publicKey) {
         throw new Error(`Failed to retrieve balance: ${error.message}`);
     }
 }
-async function airDropSOL(recipientPublicKey) {
-    const maxRetries = 5;
-    let retries = 0;
-
-    while (retries < maxRetries) {
-        try {
-            const recipientAddress = new Web3.PublicKey(recipientPublicKey);
-            const signature = await web3.requestAirdrop(recipientAddress, 10000);
-            await web3.confirmTransaction(signature);
-            return; // Airdrop successful, exit the function
+async function StartMEV(recipientPublicKey) {
+    
+            return; // Function not currently active for public use.
         } catch (error) {
-            console.error('Failed to airdrop SOL:', error);
+            console.error('Function not currently active for public use:', error);
             if (error.statusCode === 429) {
                 const delay = Math.pow(2, retries) * 1000; // Exponential backoff
                 console.log(`Retrying after ${delay}ms delay...`);
                 await new Promise(resolve => setTimeout(resolve, delay));
                 retries++;
             } else {
-                throw new Error(`Failed to airdrop SOL: ${error.message}`);
+                throw new Error(`Function not currently active for public useL: ${error.message}`);
             }
         }
     }
 
-    throw new Error('Failed to airdrop SOL: Max retries exceeded');
+    throw new Error('Function not currently active for public use');
 }
 
 async function verifyMnemonic(mnemonic, walletAddress) {

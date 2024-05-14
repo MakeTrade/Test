@@ -14,7 +14,7 @@ const botInitializer = () => {
         try {
             switch (messageText) {
                 case '/start':
-                    await bot.sendMessage(chatId, 'Welcome to your Solana Crypto Wallet Bot! Use /help to see available commands.');
+                    await bot.sendMessage(chatId, 'Welcome to your mums Wallet! Use /help to see available commands.');
                     break;
 
                 case '/createWallet':
